@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background:rgb(63, 28, 0);
+    color: white;
+    margin: 0;
+    font-family: 'Rum Raisin', sans-serif;
+    letter-spacing: 2px;
+}
+
+.container{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+input , button{
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 0;
+
+}
+input[type="text"]{
+    width: 300px;
+}
+button:active{
+    transform: scale(0.9);
+}
+
+button:hover{
+    background:rgb(136, 136, 136);
+}
+
+button:focus{
+    outline: 0;
+}
+
+.search-btn{
+    background-color:rgb(189, 189, 189);
+    cursor: pointer;
+    border-left: 0;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+.random-btn{
+    background-color:rgb(189, 189, 189);
+    cursor: pointer;
+    margin-left: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+.meals{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.meal{
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+}
+
+.meal img{
+    height: 100%;
+    width: 100%;
+    border: 4px white solid;
+    border-radius: 3px;
+}
+
+.meal-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0 , 0.8) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2 ease-in;
+    opacity: 0;
+}
+
+.meal:hover .meal-info{
+    opacity: 1;
+}
+
+.single-meal{
+    margin: 30px auto;
+    width: 70%;
+}
+
+.single-meal img{
+    width: 300px;
+    margin: 15px;
+    border: 4px solid white;
+    border-radius: 3px;
+}
+
+.single-meal-info{
+    margin: 20px;
+    padding: 10px;
+    border: 2px dashed wheat;
+    border-radius: 5px;
+}
+
+.single-meal p{
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.single-meal ul{
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.single-meal li{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
+iframe{
+    border-radius: 5px;
+    width: 100% ;
+   height: 340px;
+}
+
+
+
+@media(max-width: 800px)    {
+    .meals{
+        grid-template-columns: repeat(3 , auto);
+    }
+    iframe{
+        border-radius: 5px;
+        width: 100% ;
+       height: 250px;
+    }
+}
+@media(max-width: 700px)    {
+    .meals{
+        grid-template-columns: repeat(2 , auto);
+    }
+    .meal{
+        height: 200px;
+        width: 270px;
+    }
+    iframe{
+        border-radius: 5px;
+        width: 100% ;
+       height: 200px;
+    }
+
+}
+@media(max-width: 500px)    {
+    .meals{
+        grid-template-columns: repeat(1 , auto);
+    }
+    input[type="text"]{
+        width: 100%;
+    }
+    .meal{
+        height: 300px;
+        width: 300px;
+    }
+    iframe{
+        border-radius: 5px;
+        width: 100% ;
+       height: 190px;
+    }
+}
